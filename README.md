@@ -21,6 +21,24 @@ The enhanced firmware foundation is based on the Enhanced ClearCore Library:
 
 - <https://github.com/AGSweeney/EnhancedClearCoreLibrary>
 
+## Enhanced Firmware: How and Why
+
+The enhanced firmware is intended to close practical capability gaps between legacy integration expectations and modern motion requirements, while preserving EtherNet/IP interoperability.
+
+### Why enhancement is needed
+
+- The ClearLink reference defines a stable EtherNet/IP object model and assembly structure suitable for parity-oriented migration, but does not provide higher-level coordinated path constructs (for example, interpolated multi-axis contour planning as a firmware-level feature set).
+- The ClearPath-IP software reference documents a robust control model with AOIs, data exchange, and axis-level motion commands, including following/gearing behavior.
+- In the documented ClearPath-IP command set, the exposed primitives are primarily axis-level operations (enable/disable, move, jog, home, stop, redefine position, gearing, parameter read/write). Native arc/circular interpolation and general buffered multi-axis trajectory planning are not clearly presented as built-in controller-facing routines in that reference.
+- As a result, projects needing coordinated interpolation, path-level blending, or CNC-like motion composition often require additional motion logic above the base interface.
+
+### How this project addresses those gaps
+
+- Maintain ClearLink-oriented EtherNet/IP parity where feasible using the documented ClearLink object and assembly model.
+- Add higher-level coordinated motion services in firmware (including trajectory-oriented multi-axis behavior) built on the Enhanced ClearCore Library motion foundation.
+- Keep separation between motion engine, CIP/EtherNet-IP interface, and hardware abstraction so advanced features can evolve without breaking core compatibility surfaces.
+- Preserve deterministic behavior and explicit state handling so higher-level motion features remain production-appropriate.
+
 ## Why This Project
 
 Teknic lists ClearLink as "not recommended for new designs" on its downloads page. At the time of writing, this lifecycle signal is not yet consistently reflected across all product-marketing pages, while ClearLink has been removed from primary navigation. This project provides a migration path for existing machines while creating an open motion foundation for new development.
@@ -107,9 +125,17 @@ Early development. Core EtherNet/IP adapter and motion control components are fu
 
 Contributions, testing, and feedback are welcome. If you are migrating from ClearLink or deploying new systems on ClearCore, practical field feedback is especially valuable.
 
-## Project Rules
+## License
 
-1. **MIT license where applicable** - Original project code should use MIT licensing where appropriate.
-2. **Attribution to OpENer where applicable** - OpENer-derived concepts or code should be clearly attributed.
-3. **Copyright and contributor notices for original work** - Include:
-   - Adam G. Sweeney `<agsweeney@gmail.com>`
+This repository includes the following license files at the root:
+
+- `LICENSE` - MIT license for original project work (where applicable)
+- `LICENSE-OPENER.txt` - OpENer EtherNet/IP stack license copy
+- `LICENSE-CLEARCORE.txt` - Teknic ClearCore library MIT license copy
+- `LICENSE-LWIP.txt` - lwIP license copy
+
+Attribution to OpENer, Teknic ClearCore, and lwIP is provided where applicable for derived concepts or code paths.
+
+Project governance and legal/contributor rules are documented in:
+
+- `docs/PROJECT_RULES.md`
