@@ -21,18 +21,18 @@ The enhanced firmware foundation is based on the Enhanced ClearCore Library:
 
 - <https://github.com/AGSweeney/EnhancedClearCoreLibrary>
 
-## Enhanced Firmware: How and Why
+## Enhanced Firmware Rationale and Technical Approach
 
 The enhanced firmware is intended to close practical capability gaps between legacy integration expectations and modern motion requirements, while preserving EtherNet/IP interoperability.
 
-### Why enhancement is needed
+### Technical Rationale
 
 - The ClearLink reference defines a stable EtherNet/IP object model and assembly structure suitable for parity-oriented migration, but does not provide higher-level coordinated path constructs (for example, interpolated multi-axis contour planning as a firmware-level feature set).
 - The ClearPath-IP software reference documents a robust control model with AOIs, data exchange, and axis-level motion commands, including following/gearing behavior.
 - In the documented ClearPath-IP command set, the exposed primitives are primarily axis-level operations (enable/disable, move, jog, home, stop, redefine position, gearing, parameter read/write). Native arc/circular interpolation and general buffered multi-axis trajectory planning are not clearly presented as built-in controller-facing routines in that reference.
 - As a result, projects needing coordinated interpolation, path-level blending, or CNC-like motion composition often require additional motion logic above the base interface.
 
-### How this project addresses those gaps
+### Implementation Approach
 
 - Maintain ClearLink-oriented EtherNet/IP parity where feasible using the documented ClearLink object and assembly model.
 - Add higher-level coordinated motion services in firmware (including trajectory-oriented multi-axis behavior) built on the Enhanced ClearCore Library motion foundation.
