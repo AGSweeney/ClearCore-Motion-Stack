@@ -1,0 +1,3 @@
+# Local-only reference material; do not sync to remote.
+ExternalReferances/
+.cursor/
