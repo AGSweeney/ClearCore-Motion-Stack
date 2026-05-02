@@ -116,6 +116,7 @@ The documentation clearly outlines the integration model for generic controllers
 - This project is not an official Teknic product.
 - Exact parity with ClearLink in every edge case is not guaranteed.
 - This project is not intended to replace full PLC or CNC control systems.
+- This firmware is intended for development, migration, and internal machine integration use. It is not positioned as a commercial ODVA-conformant offering, and no ODVA conformance certification is claimed, sought, or implied.
 
 ## Status
 
