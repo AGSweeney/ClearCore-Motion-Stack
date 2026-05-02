@@ -6,10 +6,10 @@ Open EtherNet/IP motion firmware for ClearCore, focused on practical ClearLink m
 
 ClearCore Motion Stack extends Teknic ClearCore with a flexible, production-oriented EtherNet/IP motion platform.
 
-The project is built around two operating modes:
+The project is delivered as two firmware variants:
 
-- **ClearLink Compatibility Mode** - Enables migration from legacy ClearLink systems with minimal PLC and scanner-side changes.
-- **Coordinated Motion Mode** - Adds multi-axis capabilities beyond ClearLink, including synchronized and trajectory-based behavior.
+- **ClearLink Compatibility Firmware** - Enables migration from legacy ClearLink systems with minimal PLC and scanner-side changes.
+- **Coordinated Motion Firmware** - Adds multi-axis capabilities beyond ClearLink, including synchronized and trajectory-based behavior.
 
 ## Technical Basis
 
