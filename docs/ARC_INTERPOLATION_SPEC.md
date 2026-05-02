@@ -208,12 +208,12 @@ UNIT_MM                    := 1;
 UNIT_IN                    := 2;
 UNIT_DEG                   := 3;
 
-MOTOR_MASK_M0_M1           := 16#03;   (* bit0=M0, bit1=M1 *)
+MOTOR_MASK_M0_M1           := 3;       (* bit0=M0, bit1=M1 *)
 
 (* Example flag bits (project-defined in your schema) *)
-FLAG_COORD_ABSOLUTE        := 16#0001; (* 0=incremental, 1=absolute *)
-FLAG_ARC_MODE_CENTER       := 16#0002; (* center-offset mode *)
-FLAG_PLANE_M0_M1           := 16#0010; (* XY-equivalent using M0/M1 *)
+FLAG_COORD_ABSOLUTE        := 1;       (* 0=incremental, 1=absolute *)
+FLAG_ARC_MODE_CENTER       := 2;       (* center-offset mode *)
+FLAG_PLANE_M0_M1           := 16;      (* XY-equivalent using M0/M1 *)
 
 (* ---------- Tags (conceptual) ---------- *)
 (* Out112Ext = extension fields in instance 112 (bytes 280+) *)
