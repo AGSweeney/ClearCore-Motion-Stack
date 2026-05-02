@@ -136,6 +136,10 @@ This repository includes the following license files at the root:
 
 Attribution to OpENer, Teknic ClearCore, and lwIP is provided where applicable for derived concepts or code paths.
 
+## Trademark Notice
+
+EtherNet/IP is a trademark of ODVA, Inc.
+
 Project governance and legal/contributor rules are documented in:
 
 - `docs/PROJECT_RULES.md`
