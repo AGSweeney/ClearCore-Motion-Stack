@@ -31,7 +31,7 @@ Taken together, these signals are consistent with ClearPath-IP being positioned 
 
 ## Successor Platform Compatibility and Integration Complexity
 
-Based on Teknic's ClearPath-IP documentation, migration to the likely successor platform must account for integration complexity beyond simple command/status exchange.
+Based on Teknic's ClearPath-IP documentation, migration to the likely successor platform requires careful integration planning beyond simple command/status exchange. This is not inherently negative for all users; the impact depends on PLC platform capabilities and tooling.
 
 ### Key Observations from Teknic Documentation
 
@@ -45,7 +45,9 @@ Based on Teknic's ClearPath-IP documentation, migration to the likely successor 
 - Multiple I/O HUB variants use different assembly instance IDs and payload sizes, increasing controller mapping and validation effort.
 - PLCs that do not support EDS or equivalent tooling can require substantial manual implementation work.
 
-These factors can increase project risk, integration time, and maintenance cost across mixed PLC ecosystems. ClearCore Motion Stack is intended to reduce that burden through a clearer compatibility layer and open, portable motion architecture.
+For Studio 5000 environments with Teknic-provided AOIs/examples, this workflow can be straightforward. For some non-Studio 5000 PLC environments (especially where EDS support or equivalent abstractions are limited), implementation effort can increase due to manual mapping and logic recreation.
+
+The documentation clearly outlines the integration model for generic controllers, but provides less prescriptive, platform-specific implementation detail for non-Studio 5000 ecosystems. ClearCore Motion Stack is intended to reduce that burden through a clearer compatibility layer and open, portable motion architecture.
 
 - Reference: Teknic "ClearPath-IP Software Reference" (Rev 1.1, Nov 20, 2025)
 
