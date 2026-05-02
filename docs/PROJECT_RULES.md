@@ -31,7 +31,7 @@ Original work in this project should include the following notice identity:
 
 - Keep licensing and attribution statements current in `README.md`.
 - Keep this rules document aligned with actual dependency usage and included license files.
-- For trademarked terms (for example, EtherNet/IP), use trademark notation on first prominent mention per document, then use plain text thereafter.
+- For trademarked terms (for example, EtherNet/IP), use trademark notation consistent with cited third-party source documents on first prominent mention per document (for example, `EtherNet/IP®`), then use plain text thereafter.
 - Keep trademark ownership notices accurate (for example, "EtherNet/IP is a trademark of ODVA, Inc.").
 
 ## 5) Coding Standards Compliance

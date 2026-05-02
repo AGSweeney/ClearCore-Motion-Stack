@@ -1,4 +1,4 @@
-# ClearCore EtherNet/IP<sup><small>TM</small></sup> Motion Stack
+# ClearCore EtherNet/IP<sup><small>&reg;</small></sup> Motion Stack
 
 Open EtherNet/IP motion firmware for ClearCore, focused on practical ClearLink migration and advanced coordinated motion.
 
