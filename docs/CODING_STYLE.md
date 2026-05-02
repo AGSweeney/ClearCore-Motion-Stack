@@ -53,6 +53,7 @@ Recommended template:
 - Write comments in English.
 - Prefer clear code over excessive comments, but always document non-obvious behavior and safety-critical logic.
 - Remove stale or misleading comments immediately.
+- For trademarked technology names in docs/comments, use trademark notation on first prominent mention per document (or major section), then use plain text for readability.
 - Use Doxygen-style comments for public functions, structs, enums, and important globals.
 - Do not rely on autobrief; use explicit `@brief`.
 - Use inline Doxygen member comments (`/**< ... */`) for struct fields, enum members, and documented constants when useful.
