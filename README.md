@@ -11,6 +11,12 @@ The project is delivered as two firmware variants:
 - **ClearLink Compatibility Firmware** - Enables migration from legacy ClearLink systems with minimal PLC and scanner-side changes.
 - **Coordinated Motion Firmware** - Adds multi-axis capabilities beyond ClearLink, including synchronized and trajectory-based behavior.
 
+## MotionBench
+
+[MotionBench](MotionBench/README.md) is a Qt Quick/QML Windows operator tool for bench validation of ClearLink-compatible EtherNet/IP devices. It supports discovery, explicit-messaging connect by IP, polling-based telemetry and alerts, mode-aware motor configuration (Step/Dir and M-connector), digital/CCIO controls, and operator writes that respect external scanner ownership.
+
+For build prerequisites (CMake, Qt 6.5+, MSVC), Visual Studio workflow commands, `windeployqt` deployment notes, screenshots, and deeper docs (object map, architecture, validation checklist), see the **[MotionBench README](MotionBench/README.md)**.
+
 ## Technical Basis
 
 The compatibility layer in this project is based on the ClearLink EtherNet/IP object model documented in:
