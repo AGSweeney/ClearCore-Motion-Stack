@@ -6,5 +6,4 @@ AGENTS.md
 
 # Local build / packaging outputs (not source of truth).
 MotionBench/build-vs/
-MotionBench/installer/output/
 MotionBench/motionbench-run.log
