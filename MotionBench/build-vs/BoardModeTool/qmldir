@@ -1,0 +1,5 @@
+module BoardModeTool
+typeinfo BoardModeToolApp.qmltypes
+prefer :/BoardModeTool/
+BoardModeTool 1.0 qml/BoardModeTool.qml
+

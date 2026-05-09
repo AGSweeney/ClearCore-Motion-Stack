@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/MotionBench">
+    <file alias="qmldir">D:/ClearCore-Motion-Stack/MotionBench/build-vs/MotionBench/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\ClearCore-Motion-Stack\MotionBench\build-vs\CMakeFiles\9563d7181bb7922b73f28043898bed09\motionbenchapp_qmltyperegistrations.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\ClearCore-Motion-Stack\MotionBench\build-vs\CMakeFiles\49924341f33006ba528fd12434ca49dc\MotionBenchApp_qmltyperegistration.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\ClearCore-Motion-Stack\MotionBench\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\ClearCore-Motion-Stack\MotionBench\build-vs\CMakeFiles\MotionBenchApp_qmltyperegistration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{87723216-78DD-39E9-8EF8-148982211F75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

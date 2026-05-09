@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/BoardModeTool/">
+    <file alias="qml/BoardModeTool.qml">D:/ClearCore-Motion-Stack/MotionBench/qml/BoardModeTool.qml</file>
+  </qresource>
+</RCC>
+

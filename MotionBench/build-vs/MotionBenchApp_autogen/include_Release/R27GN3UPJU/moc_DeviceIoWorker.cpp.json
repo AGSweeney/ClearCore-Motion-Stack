@@ -1,0 +1,397 @@
+{
+    "classes": [
+        {
+            "className": "DeviceIoWorker",
+            "lineNumber": 12,
+            "methods": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "timeout_ms",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 8,
+                    "name": "discover",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "index": 9,
+                    "isCloned": true,
+                    "name": "discover",
+                    "returnType": "QVariantList"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "target_ip",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 10,
+                    "name": "connectDevice",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 11,
+                    "name": "disconnectDevice",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 12,
+                    "name": "startPolling",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 13,
+                    "name": "stopPolling",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "index": 14,
+                    "name": "refreshOnce",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 15,
+                    "name": "writeMotorVelocity",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 16,
+                    "name": "writeMoveDistance",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 17,
+                    "name": "writeMoveVelocity",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 18,
+                    "name": "writeAccel",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 19,
+                    "name": "writeDecel",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "quint32"
+                        }
+                    ],
+                    "index": 20,
+                    "name": "writeControlRegister",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "bit_index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 21,
+                    "name": "writeControlBit",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "move_distance",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 22,
+                    "name": "commandPositionalMove",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "index": 23,
+                    "name": "commandStopPositionalMove",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "instance_id",
+                            "type": "int"
+                        },
+                        {
+                            "name": "state",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 24,
+                    "name": "writeDigitalOutput",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 25,
+                    "name": "writeCcioEnabled",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "board_index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "output_bit",
+                            "type": "int"
+                        },
+                        {
+                            "name": "enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 26,
+                    "name": "writeCcioOutputBit",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "bit_index",
+                            "type": "int"
+                        },
+                        {
+                            "name": "enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 27,
+                    "name": "writeMConnectorOutputBit",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 28,
+                    "name": "writeMConnectorTriggerPulses",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 29,
+                    "name": "writeMConnectorPwmA",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 30,
+                    "name": "writeMConnectorPwmB",
+                    "returnType": "bool"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "field_key",
+                            "type": "QString"
+                        },
+                        {
+                            "name": "value",
+                            "type": "QVariant"
+                        }
+                    ],
+                    "index": 31,
+                    "name": "writeMotorConfigField",
+                    "returnType": "bool"
+                }
+            ],
+            "object": true,
+            "qualifiedClassName": "motion_bench::device::DeviceIoWorker",
+            "signals": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "connected",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 0,
+                    "name": "connectionChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "polling_enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 1,
+                    "name": "pollingChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "error",
+                            "type": "QString"
+                        }
+                    ],
+                    "index": 2,
+                    "name": "errorChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "double"
+                        }
+                    ],
+                    "index": 3,
+                    "name": "supplyVoltageUpdated",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "monitor_data",
+                            "type": "QVariantMap"
+                        }
+                    ],
+                    "index": 4,
+                    "name": "monitorDataUpdated",
+                    "returnType": "void"
+                }
+            ],
+            "slots": [
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "interval_ms",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 5,
+                    "name": "setPollIntervalMs",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "instance_id",
+                            "type": "int"
+                        }
+                    ],
+                    "index": 6,
+                    "name": "setSelectedMotorInstance",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "arguments": [
+                        {
+                            "name": "enabled",
+                            "type": "bool"
+                        }
+                    ],
+                    "index": 7,
+                    "name": "setOperatorControlsEnabled",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "DeviceIoWorker.h",
+    "outputRevision": 68
+}

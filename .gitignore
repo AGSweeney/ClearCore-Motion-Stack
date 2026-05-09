@@ -1,3 +1,5 @@
 # Local-only reference material; do not sync to remote.
 ExternalReferances/
+ProjectTemplate/
 .cursor/
+AGENTS.md

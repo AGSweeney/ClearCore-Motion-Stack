@@ -1,0 +1,18 @@
+{
+    "classes": [
+        {
+            "className": "ListIdentityService",
+            "lineNumber": 10,
+            "object": true,
+            "qualifiedClassName": "motion_bench::discovery::ListIdentityService",
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "ListIdentityService.h",
+    "outputRevision": 68
+}

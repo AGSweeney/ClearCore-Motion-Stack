@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="icons/boardmode-icon-16.png">../assets/icons/boardmode-icon-16.png</file>
+        <file alias="icons/boardmode-icon-20.png">../assets/icons/boardmode-icon-20.png</file>
+        <file alias="icons/boardmode-icon-24.png">../assets/icons/boardmode-icon-24.png</file>
+        <file alias="icons/boardmode-icon-32.png">../assets/icons/boardmode-icon-32.png</file>
+        <file alias="icons/boardmode-icon-40.png">../assets/icons/boardmode-icon-40.png</file>
+        <file alias="icons/boardmode-icon-48.png">../assets/icons/boardmode-icon-48.png</file>
+        <file alias="icons/boardmode-icon-64.png">../assets/icons/boardmode-icon-64.png</file>
+        <file alias="icons/boardmode-icon-72.png">../assets/icons/boardmode-icon-72.png</file>
+        <file alias="icons/boardmode-icon-96.png">../assets/icons/boardmode-icon-96.png</file>
+        <file alias="icons/boardmode-icon-128.png">../assets/icons/boardmode-icon-128.png</file>
+        <file alias="icons/boardmode-icon-256.png">../assets/icons/boardmode-icon-256.png</file>
+        <file alias="icons/boardmode-icon-512.png">../assets/icons/boardmode-icon-512.png</file>
+        <file alias="icons/boardmode-icon-1024.png">../assets/icons/boardmode-icon-1024.png</file>
+    </qresource>
+</RCC>

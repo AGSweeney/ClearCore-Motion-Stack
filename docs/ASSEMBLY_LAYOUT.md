@@ -1,8 +1,10 @@
-# ClearLink Assembly Layout (Source-of-Truth)
+# ClearLink Assembly Layout (Parity Map)
 
-This document defines the EtherNet/IP Assembly layout used for parity behavior in this project.
+This document summarizes the EtherNet/IP assembly layout used for parity firmware in this project.
 
-Source of truth:
+**Authority when anything disagrees:** `ExternalReferances/clearlink_ethernet-ip_object_reference.pdf` (*ClearLink EtherNet/IP Object Data Reference* / object reference) is the standard. If this markdown, the setup manual, or code diverges from that PDF on byte layout, class/instance/attribute definitions, or bit meanings, **reconcile toward the PDF** (then update this file and firmware to match).
+
+Informative citation (revision naming may differ by publication):
 
 - *ClearLink EtherNet/IP Setup and Object Data Reference*, Rev. 1.15 (February 20, 2025)
 
@@ -142,24 +144,26 @@ DIP filter ordering:
 
 ### Per-Motor Configuration Blocks (`0x64`, instances 1-4)
 
-Each motor block is 32 bytes and contains:
+Each motor block is **32 bytes** (PDF Configuration Assembly 150):
 
-- Config Register `DWORD`
-- Follow Divisor `DINT`
-- Follow Multiplier `DINT`
-- Max Deceleration `DINT`
-- Soft Limit 1 `DINT`
-- Soft Limit 2 `DINT`
-- Positive Limit `SINT`
-- Negative Limit `SINT`
-- Home Sensor `SINT`
-- Brake `SINT`
-- Stop Sensor `SINT`
-- Position Capture Sensor `SINT`
-- Follow Axis `SINT`
-- Reserved byte
+| Byte offset (within block) | Field | CIP type |
+|---:|---|---|
+| 0–3 | Config Register | `DWORD` |
+| 4–7 | Follow Divisor | `DINT` |
+| 8–11 | Follow Multiplier | `DINT` |
+| 12–15 | Max Deceleration | `DINT` |
+| 16–19 | Soft Limit 1 | `DINT` |
+| 20–23 | Soft Limit 2 | `DINT` |
+| 24 | Positive Limit connector | `SINT` (1 byte) |
+| 25 | Negative Limit | `SINT` |
+| 26 | Home Sensor | `SINT` |
+| 27 | Brake | `SINT` |
+| 28 | Stop Sensor | `SINT` |
+| 29 | Position Capture Sensor | `SINT` |
+| 30 | Follow Axis | `SINT` |
+| 31 | Reserved padding | — |
 
-Offsets:
+Absolute byte ranges:
 
 - Motor 0: `80-111`
 - Motor 1: `112-143`
@@ -263,14 +267,16 @@ Total size: `120` bytes
 
 ### Motor Connector Config (4 motors)
 
-Per motor (4 bytes each):
+Bytes `80-95`: **16 bytes** (4 motors × **4 bytes**), per PDF Configuration Assembly 151. Each 4-byte slice:
 
-- Enable Input Connector `SINT`
-- A Input Connector `SINT`
-- B Input Connector `SINT`
-- Trigger Pulse Time `USINT`
+| Offset in slice | Field | CIP type |
+|---:|---|---|
+| 0 | Enable Input Connector | `SINT` (1 byte) |
+| 1 | A Input Connector | `SINT` |
+| 2 | B Input Connector | `SINT` |
+| 3 | Trigger Pulse Time | `USINT` |
 
-Offsets:
+Absolute ranges:
 
 - Motor 0: `80-83`
 - Motor 1: `84-87`
@@ -288,7 +294,14 @@ Offsets:
 
 ## Implementation Notes for Parity Firmware
 
-- Treat this document and the cited ClearLink reference revision as authoritative for assembly byte layout.
+- Assembly and object semantics: **PDF object reference first**; keep this document aligned with it after code changes.
 - Keep instance IDs and payload sizes fixed for parity mode.
 - Preserve ordering and packing of status bitfields and filter arrays exactly as specified.
 - Validate both Step/Direction (`100/112/150`) and M-Connector (`101/113/151`) assembly families.
+- **Class 0x65 motor status / shutdowns** packed into assemblies **100** / explicit **Get**: layout follows PDF **Table 24** (status DWORD) and **Table 25** (shutdown DWORD). `libClearCore` `AlertRegMotor` maps to Table 25 bits 0–3, 5, and 10; Table 25 **bit 4** (SW E-Stop) and **bit 6** (soft limit exceeded) are **host-latched** in parity firmware when the O2T output register (Table 28) asserts **SW E-Stop (bit 5)** or rejects a **Load Position** due to soft limits; **Clear Alerts (output bit 6)** clears those latch bits together with `MotorDriver::ClearAlerts`.
+- **Class 0x64 config DWORD** (Table 21): bit **2** enable inversion, bit **3** HLFB active-level selector in this bridge implementation, bit **5** soft limit enable (with two distinct soft-limit positions). Default `0x0008` per configuration assembly table.
+- **HLFB config bit behavior:** host-visible bit 3 is treated as HLFB active-high selection for parity with existing ClearLink tooling; it is inverted when applied to `MotorDriver::PolarityInvertSDHlfb(...)` because `PolarityInvertSDHlfb(true)` means active-low at the driver layer.
+- **Class 0x69 board mode (instance 1, attr 2):** host semantics are `0 = Step/Direction`, `1 = non-Step/Direction (M-connector style)`. Bridge helper `BoardMotorMode_Request(nonzero)` uses the opposite polarity (`nonzero => Step/Direction`) internally.
+- **Class 0x66 Add To Position (attr 7 / assembly 112 per-motor field):** non-zero command is edge-applied once per non-zero period (requires return to `0` to re-arm), and now updates the real motor commanded reference via `PositionRefSet(PositionRefCommanded() + delta)` instead of only modifying mirrored input fields.
+- **Class 0x65 input block target velocity field:** for accepted positional moves, parity firmware mirrors the active velocity limit into `Target Velocity` so host UIs observing Table 24/assembly input data see a non-zero target-speed context during position commands.
+- **Fault/status policy:** parity firmware maps only real `MotorDriver` status/alert content plus the explicit host-latched Table 25 bits documented above (SW E-Stop and soft-limit-exceeded). It does not synthesize additional motor-fault bits beyond those sources.

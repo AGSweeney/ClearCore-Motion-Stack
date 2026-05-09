@@ -1,0 +1,12 @@
+--bare
+-I
+D:/ClearCore-Motion-Stack/MotionBench/build-vs
+-I
+C:/Qt/6.8.3/msvc2022_64/qml
+--resource
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/qmake_BoardModeTool.qrc
+--resource
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/BoardModeToolApp_raw_qml_0.qrc
+D:/ClearCore-Motion-Stack/MotionBench/qml/BoardModeTool.qml
+--json
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/BoardModeToolApp_qmllint.json

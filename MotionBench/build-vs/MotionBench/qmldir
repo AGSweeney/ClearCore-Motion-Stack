@@ -1,0 +1,5 @@
+module MotionBench
+typeinfo MotionBenchApp.qmltypes
+prefer :/MotionBench/
+Main 1.0 qml/Main.qml
+

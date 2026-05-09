@@ -1,0 +1,12 @@
+--bare
+-I
+D:/ClearCore-Motion-Stack/MotionBench/build-vs
+-I
+C:/Qt/6.8.3/msvc2022_64/qml
+--resource
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/qmake_MotionBench.qrc
+--resource
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/MotionBenchApp_raw_qml_0.qrc
+D:/ClearCore-Motion-Stack/MotionBench/qml/Main.qml
+--json
+D:/ClearCore-Motion-Stack/MotionBench/build-vs/MotionBenchApp_qmllint.json
