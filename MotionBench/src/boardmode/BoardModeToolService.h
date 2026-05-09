@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: BoardModeToolService.h
+ * Purpose: QML service for board-mode control via vendor object class 0x69 attribute 2.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #pragma once
 
 #include <QtCore/QObject>

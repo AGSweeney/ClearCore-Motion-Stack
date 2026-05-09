@@ -1,4 +1,14 @@
 @echo off
+REM ---------------------------------------------------------------------------
+REM Copyright (c) 2026 Adam G. Sweeney
+REM SPDX-License-Identifier: MIT
+REM
+REM Contributors:
+REM   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+REM
+REM File: build_vs.cmd
+REM Purpose: Developer helper to configure and build MotionBench with Visual Studio.
+REM ---------------------------------------------------------------------------
 setlocal EnableExtensions EnableDelayedExpansion
 
 set "SCRIPT_DIR=%~dp0"

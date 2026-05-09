@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: main.cpp
+ * Purpose: Application entry for MotionBench; loads the Qt Quick shell and AppViewModel.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #include <QtGui/QGuiApplication>
 #include <QtGui/QIcon>
 #include <QtQuickControls2/QQuickStyle>

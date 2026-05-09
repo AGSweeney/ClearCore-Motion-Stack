@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/MotionBench">D:/ClearCore-Motion-Stack/MotionBench/build-vs/MotionBench</file>
-
-  </qresource>
-</RCC>

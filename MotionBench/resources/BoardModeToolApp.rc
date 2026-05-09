@@ -1,1 +1,8 @@
+// Copyright (c) 2026 Adam G. Sweeney
+// SPDX-License-Identifier: MIT
+//
+// Contributors: 2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+//
+// File: BoardModeToolApp.rc
+// Purpose: Windows executable icon resource for BoardModeTool.
 IDI_ICON1 ICON "../assets/icons/boardmode-app.ico"

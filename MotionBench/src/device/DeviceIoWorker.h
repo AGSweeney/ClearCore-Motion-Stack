@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: DeviceIoWorker.h
+ * Purpose: Background I/O worker for explicit reads/writes and periodic polling.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #pragma once
 
 #include <QtCore/QObject>

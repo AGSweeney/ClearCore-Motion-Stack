@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: AppViewModel.cpp
+ * Purpose: Implements discovery list projection for the MotionBench QML UI.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #include "ui/viewmodels/AppViewModel.h"
 
 namespace motion_bench::ui {

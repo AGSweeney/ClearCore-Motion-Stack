@@ -1,3 +1,14 @@
+; -----------------------------------------------------------------------------
+; Copyright (c) 2026 Adam G. Sweeney
+; SPDX-License-Identifier: MIT
+;
+; Contributors:
+;   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+;
+; File: MotionBench.iss
+; Purpose: Inno Setup script for MotionBench Windows installer packaging.
+; -----------------------------------------------------------------------------
+
 #define MyAppName "MotionBench"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Adam G. Sweeney"

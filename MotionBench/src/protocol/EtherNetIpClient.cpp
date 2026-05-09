@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: EtherNetIpClient.cpp
+ * Purpose: TCP/UDP encapsulation, ListIdentity, session lifecycle, SendRRData, CIP I/O.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #include "protocol/EtherNetIpClient.h"
 
 #include <QtCore/QDataStream>

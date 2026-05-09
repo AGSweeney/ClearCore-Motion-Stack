@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2026 Adam G. Sweeney
+  SPDX-License-Identifier: MIT
+
+  Contributors: 2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+
+  File: BoardModeToolIcons.qrc
+  Purpose: Qt resource listing for BoardModeTool icon PNGs.
+-->
 <RCC>
     <qresource prefix="/">
         <file alias="icons/boardmode-icon-16.png">../assets/icons/boardmode-icon-16.png</file>

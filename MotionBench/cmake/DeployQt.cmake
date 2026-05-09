@@ -1,3 +1,17 @@
+# -----------------------------------------------------------------------------
+# Copyright (c) 2026 Adam G. Sweeney
+# SPDX-License-Identifier: MIT
+#
+# Contributors:
+#   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+#
+# File: DeployQt.cmake
+# Purpose: windeployqt post-build hook for Windows Qt runtime deployment.
+#
+# Attribution: Portions of this design/implementation are influenced by
+# OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+# -----------------------------------------------------------------------------
+
 function(setup_qt_deploy target_name)
     if(NOT WIN32)
         return()

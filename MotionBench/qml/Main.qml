@@ -1,3 +1,17 @@
+/*
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: Main.qml
+ * Purpose: MotionBench primary application window and operator UI layout.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ */
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts

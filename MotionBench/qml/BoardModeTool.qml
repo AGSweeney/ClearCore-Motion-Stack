@@ -1,3 +1,17 @@
+/*
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: BoardModeTool.qml
+ * Purpose: Compact BoardModeTool window for board mode read/write via vendor object.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ */
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts

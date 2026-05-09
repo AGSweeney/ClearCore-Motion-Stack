@@ -1,3 +1,17 @@
+# -----------------------------------------------------------------------------
+# Copyright (c) 2026 Adam G. Sweeney
+# SPDX-License-Identifier: MIT
+#
+# Contributors:
+#   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+#
+# File: CMakeLists.txt
+# Purpose: Top-level CMake build for MotionBenchApp, BoardModeToolApp, and CTest targets.
+#
+# Attribution: Portions of this design/implementation are influenced by
+# OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+# -----------------------------------------------------------------------------
+
 cmake_minimum_required(VERSION 3.21)
 
 project(MotionBench VERSION 0.1.0 LANGUAGES CXX)

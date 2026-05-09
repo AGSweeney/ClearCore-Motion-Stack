@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Copyright (c) 2026 Adam G. Sweeney
+ * SPDX-License-Identifier: MIT
+ *
+ * Contributors:
+ *   2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench original implementation
+ *
+ * File: DeviceIoWorker.cpp
+ * Purpose: Motor, digital output, and CCIO access via ClearLinkObjectMap and EtherNet/IP.
+ *
+ * Attribution: Portions of this design/implementation are influenced by
+ * OpENer (Open Source EtherNet/IP Adapter Stack), where applicable.
+ ******************************************************************************/
+
 #include "device/DeviceIoWorker.h"
 
 #include <QtCore/QByteArray>

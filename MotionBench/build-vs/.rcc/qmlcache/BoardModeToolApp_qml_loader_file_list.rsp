@@ -1,5 +1,0 @@
---resource
-D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/qmake_BoardModeTool.qrc
---resource
-D:/ClearCore-Motion-Stack/MotionBench/build-vs/.qt/rcc/BoardModeToolApp_raw_qml_0.qrc
-/BoardModeTool/qml/BoardModeTool.qml

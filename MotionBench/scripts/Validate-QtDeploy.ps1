@@ -1,3 +1,12 @@
+<#
+Copyright (c) 2026 Adam G. Sweeney
+SPDX-License-Identifier: MIT
+
+Contributors: 2026 Adam G. Sweeney <agsweeney@gmail.com> - MotionBench / ClearCore Motion Stack
+
+File: Validate-QtDeploy.ps1
+Purpose: Verify windeployqt output contains required Qt DLLs and platform plugin.
+#>
 param(
     [Parameter(Mandatory = $true)]
     [string]$BinaryDirectory,
