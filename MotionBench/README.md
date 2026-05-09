@@ -4,6 +4,8 @@ MotionBench is a Qt Quick/QML Win32 operator tool for monitoring and commanding 
 
 It is built for bench validation: discover devices, connect to a target IP, monitor motor and I/O telemetry, issue operator commands, and tune motor/board behavior from one UI.
 
+MotionBench is a reimagining of the original ClearLinkMonitor project, modernized into a Qt/C++ workflow with expanded focus: [agsweeney1972/ClearLinkMonitor](https://github.com/agsweeney1972/ClearLinkMonitor). This reimagined version provides a better tool for testing my ClearCore EtherNet/IP firmware in ClearLink personality mode.
+
 ## What MotionBench Includes
 
 - Device discovery and direct connect/disconnect workflow.
