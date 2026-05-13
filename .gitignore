@@ -3,6 +3,7 @@ ExternalReferances/
 ProjectTemplate/
 .cursor/
 AGENTS.md
+.vs/
 
 # Local build / packaging outputs (not source of truth).
 MotionBench/build-vs/
