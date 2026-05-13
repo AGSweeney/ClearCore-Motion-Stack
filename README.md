@@ -10,7 +10,7 @@ The project focuses primarily on:
 - EtherNet/IP motion experimentation
 - Industrial controller interoperability
 - PLC and robotics integration
-- Extensions to the Enhanced ClearCore Library
+- Extensions to the [Enhanced ClearCore Library](https://github.com/AGSweeney/EnhancedClearCoreLibrary)
 
 Additional interoperability modes are also being explored to simplify integration continuity for existing ClearLink-based machine architectures where appropriate.
 
@@ -63,7 +63,7 @@ The project is intended as a research and experimentation platform rather than a
 
 # Coordinated Motion Research
 
-A major focus of this repository is coordinated multi-axis motion functionality built around extensions to the Enhanced ClearCore Library.
+A major focus of this repository is coordinated multi-axis motion functionality built around extensions to the [Enhanced ClearCore Library](https://github.com/AGSweeney/EnhancedClearCoreLibrary).
 
 Current areas of investigation include:
 - Multi-axis interpolation
@@ -129,9 +129,7 @@ Teknic continues to manufacture and support both ClearCore and ClearLink hardwar
 
 This repository should not be interpreted as an official successor platform or replacement product for any Teknic offering.
 
-Additional information regarding ClearPath-IP can be found here:
-
-https://teknic.com/products/clearpath-brushless-dc-servo-motors/ethernet-ip-servo/
+For Teknic's own product positioning and specifications in adjacent EtherNet/IP and IO-centric motion spaces, refer to their pages for [ClearPath-IP (EtherNet/IP servo)](https://teknic.com/products/clearpath-brushless-dc-servo-motors/ethernet-ip-servo/), the [IO Motion Controller](https://teknic.com/products/io-motion-controller/), and the [EtherNet/IP IO Motion Controller](https://teknic.com/products/ethernet-ip-io-motion-controller/).
 
 ---
 
@@ -142,7 +140,7 @@ Current project direction primarily targets:
 - ClearPath SD Series servos
 - ClearPath MC Series servos
 
-The project currently does not target ClearPath-IP or IO-Hub hardware.
+The project currently does not target ClearPath-IP, IO-Hub, or the related IO motion controller platforms as in-scope development targets for this repository. Use Teknic's official product pages (see the **Relationship to Teknic Products** section above) when evaluating those systems.
 
 ---
 
@@ -179,11 +177,32 @@ Planned development and research areas currently include:
 
 ## Enhanced ClearCore Library
 
-Experimental extensions to the ClearCore ecosystem focused on advanced motion functionality and industrial control experimentation.
+Independent experimental extensions to the ClearCore ecosystem focused on advanced motion functionality and industrial control experimentation: [AGSweeney/EnhancedClearCoreLibrary](https://github.com/AGSweeney/EnhancedClearCoreLibrary) on GitHub.
 
 ## MotionBench Utility
 
-Experimental utility for EtherNet/IP motion testing, diagnostics, and configuration research.
+Experimental desktop utility in this repository for EtherNet/IP motion testing, diagnostics, and configuration research. Start with [`MotionBench/README.md`](MotionBench/README.md).
+
+## OpENer
+
+EtherNet/IP adapter-related firmware work in this repository builds on the community [OpENer](https://github.com/EIPStackGroup/OpENer) project (open-source EtherNet/IP communication stack). Use that repository for upstream sources, licensing, and contribution workflow.
+
+---
+
+# Example Integration Projects
+
+These sibling repositories illustrate applied industrial EtherNet/IP interoperability and motion-oriented integration patterns related to the research themes in this stack. They are maintained separately from ClearCore Motion Stack.
+
+## Motoman EtherNet/IP ToolChanger
+
+Industrial EtherNet/IP interoperability research involving:
+
+- Yaskawa/Motoman robot integration
+- EtherNet/IP motion coordination
+- Lightweight industrial communication
+- External motion device synchronization
+
+Source: [AGSweeney/Motoman_EnIP_ToolChanger](https://github.com/AGSweeney/Motoman_EnIP_ToolChanger) on GitHub.
 
 ---
 
