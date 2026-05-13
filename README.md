@@ -1,152 +1,208 @@
-# ClearCore EtherNet/IP<sup><small>&reg;</small></sup> Motion Stack
+# ClearCore Motion Stack
 
-Open EtherNet/IP motion firmware for ClearCore, focused on practical ClearLink migration and advanced coordinated motion.
+Experimental coordinated motion and EtherNet/IP motion research platform for Teknic ClearCore hardware.
 
-## Overview
+ClearCore Motion Stack explores advanced multi-axis motion control, industrial interoperability, and lightweight EtherNet/IP motion architectures using the Teknic ClearCore ecosystem.
 
-ClearCore Motion Stack extends Teknic ClearCore with a flexible, production-oriented EtherNet/IP motion platform.
+The project focuses primarily on:
+- Coordinated multi-axis motion research
+- Motion planning and trajectory execution
+- EtherNet/IP motion experimentation
+- Industrial controller interoperability
+- PLC and robotics integration
+- Extensions to the Enhanced ClearCore Library
 
-The project is delivered as two firmware variants:
+Additional interoperability modes are also being explored to simplify integration continuity for existing ClearLink-based machine architectures where appropriate.
 
-- **ClearLink Compatibility Firmware** - Enables migration from legacy ClearLink systems with minimal PLC and scanner-side changes.
-- **Coordinated Motion Firmware** - Adds multi-axis capabilities beyond ClearLink, including synchronized and trajectory-based behavior.
+---
 
-## MotionBench
+# Project Status
 
-[MotionBench](MotionBench/README.md) is a Qt Quick/QML Windows operator tool for bench validation of ClearLink-compatible EtherNet/IP devices. It supports discovery, explicit-messaging connect by IP, polling-based telemetry and alerts, mode-aware motor configuration (Step/Dir and M-connector), digital/CCIO controls, and operator writes that respect external scanner ownership.
+This repository is currently in active research and development.
 
-For build prerequisites (CMake, Qt 6.5+, MSVC), Visual Studio workflow commands, `windeployqt` deployment notes, screenshots, and deeper docs (object map, architecture, validation checklist), see the **[MotionBench README](MotionBench/README.md)**.
+At this stage the repository primarily contains:
+- Architecture planning
+- Interface concepts
+- Motion system design notes
+- Integration research
+- Development direction documentation
 
-## Technical Basis
+Firmware implementations, motion planners, and protocol layers are still evolving and subject to substantial change.
 
-The compatibility layer in this project is based on the ClearLink EtherNet/IP object model documented in:
+---
 
-- ClearLink EtherNet/IP Setup and Object Data Reference, Rev. 1.15 (February 20, 2025)
+# Important Notice
 
-The enhanced firmware foundation is based on the Enhanced ClearCore Library:
+ClearCore Motion Stack is an independent third-party project and is not affiliated with, endorsed by, or supported by Teknic Inc.
 
-- <https://github.com/AGSweeney/EnhancedClearCoreLibrary>
+Teknic, ClearCore, ClearLink, ClearPath, and ClearPath-IP are trademarks or registered trademarks of Teknic Inc.
 
-## Enhanced Firmware Rationale and Technical Approach
+This repository exists for engineering research, interoperability experimentation, and industrial motion development.
 
-The enhanced firmware is intended to close practical capability gaps between legacy integration expectations and modern motion requirements, while preserving EtherNet/IP interoperability.
+---
 
-### Technical Rationale
+# Project Goals
 
-- The ClearLink reference defines a stable EtherNet/IP object model and assembly structure suitable for parity-oriented migration, but does not provide higher-level coordinated path constructs (for example, interpolated multi-axis contour planning as a firmware-level feature set).
-- The ClearPath-IP software reference documents a robust control model with AOIs, data exchange, and axis-level motion commands, including following/gearing behavior.
-- In the documented ClearPath-IP command set, the exposed primitives are primarily axis-level operations (enable/disable, move, jog, home, stop, redefine position, gearing, parameter read/write). Native arc/circular interpolation and general buffered multi-axis trajectory planning are not clearly presented as built-in controller-facing routines in that reference.
-- As a result, projects needing coordinated interpolation, path-level blending, or CNC-like motion composition often require additional motion logic above the base interface.
+The primary goal of this project is to explore what is possible when extending the ClearCore ecosystem beyond traditional single-axis motion applications.
 
-### Implementation Approach
+Areas of investigation include:
+- Coordinated linear and circular interpolation
+- Buffered trajectory execution
+- Motion queueing systems
+- Streaming motion architectures
+- External motion synchronization
+- EtherNet/IP motion transport
+- PLC-integrated motion control
+- Industrial robotics interoperability
+- Lightweight industrial motion systems
+- CNC-style motion experimentation
 
-- Maintain ClearLink-oriented EtherNet/IP parity where feasible using the documented ClearLink object and assembly model.
-- Add higher-level coordinated motion services in firmware (including trajectory-oriented multi-axis behavior) built on the Enhanced ClearCore Library motion foundation.
-- Keep separation between motion engine, CIP/EtherNet-IP interface, and hardware abstraction so advanced features can evolve without breaking core compatibility surfaces.
-- Preserve deterministic behavior and explicit state handling so higher-level motion features remain production-appropriate.
+The project is intended as a research and experimentation platform rather than a commercial motion controller product.
 
-## Why This Project
+---
 
-Teknic lists ClearLink as "not recommended for new designs" on its downloads page. At the time of writing, this lifecycle signal is not yet consistently reflected across all product-marketing pages, while ClearLink has been removed from primary navigation. This project provides a migration path for existing machines while creating an open motion foundation for new development.
+# Coordinated Motion Research
 
-Taken together, these signals are consistent with ClearPath-IP being positioned as the successor path for new EtherNet/IP motion designs.
+A major focus of this repository is coordinated multi-axis motion functionality built around extensions to the Enhanced ClearCore Library.
 
-- Reference: <https://teknic.com/downloads/>
+Current areas of investigation include:
+- Multi-axis interpolation
+- Linear path blending
+- Circular interpolation
+- Motion buffering
+- Continuous trajectory execution
+- External controller command streaming
+- Real-time motion synchronization
+- Deterministic EtherNet/IP motion behaviors
 
-## Successor Platform Compatibility and Integration Complexity
+The long-term objective is to investigate practical industrial motion architectures that remain lightweight, flexible, and highly interoperable.
 
-Based on Teknic's ClearPath-IP documentation, migration to the likely successor platform requires careful integration planning beyond simple command/status exchange. This is not inherently negative for all users; the impact depends on PLC platform capabilities and tooling.
+---
 
-### Key Observations from Teknic Documentation
+# Industrial Integration Focus
 
-- The **I/O HUB serves as the EtherNet/IP network interface** for ClearPath-IP systems.
-- Teknic recommends controllers that support **implicit EtherNet/IP communication** and accept **EDS files**.
-- For generic controllers, Teknic's integration flow includes:
-  - Adding an I/O HUB device
-  - Loading the correct model-specific EDS
-  - Extracting/manually mapping assemblies where needed
-  - Recreating Data Exchange / AOI-style logic in non-Logix environments
-- Multiple I/O HUB variants use different assembly instance IDs and payload sizes, increasing controller mapping and validation effort.
-- PLCs that do not support EDS or equivalent tooling can require substantial manual implementation work.
+This project places significant emphasis on interoperability with industrial automation systems including:
+- PLC platforms
+- Industrial robots
+- EtherNet/IP scanners
+- Embedded machine controllers
+- Supervisory software systems
+- Custom HMI applications
 
-For Studio 5000 environments with Teknic-provided AOIs/examples, this workflow can be straightforward. For some non-Studio 5000 PLC environments (especially where EDS support or equivalent abstractions are limited), implementation effort can increase due to manual mapping and logic recreation.
+Particular attention is being given to environments where:
+- EDS support may be limited
+- EtherNet/IP assembly sizes matter
+- Lightweight integrations are preferred
+- Existing production systems cannot be substantially redesigned
+- Flexible motion transport mechanisms are needed
 
-The documentation clearly outlines the integration model for generic controllers, but provides less prescriptive, platform-specific implementation detail for non-Studio 5000 ecosystems. ClearCore Motion Stack is intended to reduce that burden through a clearer compatibility layer and open, portable motion architecture.
+---
 
-- Reference: Teknic "ClearPath-IP Software Reference" (Rev 1.1, Nov 20, 2025)
+# Legacy Integration Compatibility
 
-## Project Goals
+In addition to coordinated motion research, this project also explores interoperability modes designed to simplify integration continuity for certain existing ClearLink-based machine architectures.
 
-### 1) Seamless ClearLink Migration
+These interoperability concepts are intended to assist with:
+- Existing EtherNet/IP machine integrations
+- Established PLC mappings
+- Legacy machine support
+- Experimental migration strategies
+- Development and testing environments
 
-- Provide a practical replacement path for ClearLink-based systems.
-- Minimize required changes to existing PLC programs and EtherNet/IP scanners.
-- Mirror expected command, status, and motion behavior where feasible.
-- Support established machine architectures and wiring approaches.
+This project is not intended to replicate, replace, or emulate official Teknic products.
 
-### 2) Open EtherNet/IP Motion Platform
+---
 
-- Build on OpENer for adapter functionality.
-- Define clear, versioned CIP object models and assemblies.
-- Enable deterministic cyclic I/O for motion control.
-- Support explicit messaging for configuration and diagnostics.
+# Relationship to Teknic Products
 
-### 3) Expanded Motion Capability
+Teknic's newer EtherNet/IP platform, ClearPath-IP, offers several advantages including:
+- Full servo communication and diagnostics
+- Simplified EtherNet/IP setup
+- IO-Hub-based architecture
+- Expanded software tooling
+- Rockwell AOIs
+- Enhanced drive and fault information
 
-- Add coordinated multi-axis motion support.
-- Provide buffered and blended motion execution.
-- Enable higher-level motion constructs beyond point-to-point control.
-- Support future extensions (for example: camming, gearing, path execution).
+For many new machine designs, ClearPath-IP is likely the preferred long-term EtherNet/IP platform.
 
-### 4) Hardware Abstraction
+Teknic continues to manufacture and support both ClearCore and ClearLink hardware platforms.
 
-- Decouple motion logic from underlying hardware.
-- Provide a hardware abstraction layer (HAL) for ClearCore and future targets.
-- Enable portability and long-term maintainability.
+This repository should not be interpreted as an official successor platform or replacement product for any Teknic offering.
 
-### 5) Production-Ready Reliability
+Additional information regarding ClearPath-IP can be found here:
 
-- Deterministic state machines for motion and fault handling.
-- Robust watchdog and connection-loss behavior.
-- Persistent configuration and safe startup states.
-- Testable, verifiable behavior through automated validation tools.
+https://teknic.com/products/clearpath-brushless-dc-servo-motors/ethernet-ip-servo/
 
-### 6) Developer-Friendly Architecture
+---
 
-- Clean separation between motion logic, CIP interface, and hardware abstraction.
-- Modular design for long-term feature growth.
-- Tooling support for EDS generation, configuration, and validation.
+# Hardware Focus
 
-## Non-Goals
+Current project direction primarily targets:
+- Teknic ClearCore
+- ClearPath SD Series servos
+- ClearPath MC Series servos
 
-- This project is not an official Teknic product.
-- Exact parity with ClearLink in every edge case is not guaranteed.
-- This project is not intended to replace full PLC or CNC control systems.
-- This firmware is intended for development, migration, and internal machine integration use. It is not positioned as a commercial ODVA-conformant offering, and no ODVA conformance certification is claimed, sought, or implied.
+The project currently does not target ClearPath-IP or IO-Hub hardware.
 
-## Status
+---
 
-Early development. Core EtherNet/IP adapter and motion control components are functional on ClearCore hardware. Compatibility layers and coordinated motion features remain under active development.
+# Potential Use Cases
 
-## Contributing
+Areas being explored include:
+- Experimental coordinated motion systems
+- Robotics tooling and positioning
+- PLC-integrated motion control
+- Industrial automation research
+- EtherNet/IP interoperability testing
+- CNC-style motion experimentation
+- Lightweight machine control architectures
+- Development and educational platforms
 
-Contributions, testing, and feedback are welcome. If you are migrating from ClearLink or deploying new systems on ClearCore, practical field feedback is especially valuable.
+---
 
-## License
+# Current Development Areas
 
-This repository includes the following license files at the root:
+Planned development and research areas currently include:
+- EtherNet/IP adapter behavior
+- Motion abstraction layers
+- Coordinated motion planning
+- Buffered trajectory systems
+- Lightweight communication architectures
+- Industrial controller interoperability
+- Configuration tooling
+- Diagnostics and monitoring systems
+- Motion visualization utilities
 
-- `LICENSE` - MIT license for original project work (where applicable)
-- `LICENSE-OPENER.txt` - OpENer EtherNet/IP stack license copy
-- `LICENSE-CLEARCORE.txt` - Teknic ClearCore library MIT license copy
-- `LICENSE-LWIP.txt` - lwIP license copy
+---
 
-Attribution to OpENer, Teknic ClearCore, and lwIP is provided where applicable for derived concepts or code paths.
+# Related Projects
 
-## Trademark Notice
+## Enhanced ClearCore Library
 
-EtherNet/IP is a trademark of ODVA, Inc.
+Experimental extensions to the ClearCore ecosystem focused on advanced motion functionality and industrial control experimentation.
 
-Project governance and legal/contributor rules are documented in:
+## MotionBench Utility
 
-- `docs/PROJECT_RULES.md`
+Experimental utility for EtherNet/IP motion testing, diagnostics, and configuration research.
+
+---
+
+# Repository Visibility
+
+This repository may periodically move between public and private visibility during active development.
+
+Interfaces, documentation, and architecture are subject to substantial revision as development progresses.
+
+---
+
+# License
+
+License information will be added as development progresses.
+
+---
+
+# Trademarks
+
+Teknic, ClearCore, ClearLink, ClearPath, and ClearPath-IP are trademarks or registered trademarks of Teknic Inc.
+
+All trademarks belong to their respective owners.
