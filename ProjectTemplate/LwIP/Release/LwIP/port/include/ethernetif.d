@@ -1,22 +1,33 @@
 LwIP/port/include/ethernetif.d LwIP/port/include/ethernetif.o: \
- ../LwIP/port/include/ethernetif.c ../../libClearCore/inc/EthernetApi.h \
- ../LwIP/src/include/lwip/def.h ../LwIP/src/include/lwip/arch.h \
- ../LwIP/port/include/arch/cc.h ../LwIP/src/include/lwip/opt.h \
- ../LwIP/port/include/lwipopts.h ../LwIP/src/include/lwip/debug.h \
- ../LwIP/src/include/lwip/mem.h ../LwIP/src/include/lwip/netif.h \
- ../LwIP/src/include/lwip/err.h ../LwIP/src/include/lwip/ip_addr.h \
- ../LwIP/src/include/lwip/ip4_addr.h ../LwIP/src/include/lwip/ip6_addr.h \
- ../LwIP/src/include/lwip/def.h ../LwIP/src/include/lwip/pbuf.h \
- ../LwIP/src/include/lwip/stats.h ../LwIP/src/include/lwip/memp.h \
- ../LwIP/src/include/lwip/priv/memp_std.h \
- ../LwIP/src/include/lwip/priv/memp_priv.h \
- ../LwIP/src/include/lwip/priv/mem_priv.h \
- ../LwIP/src/include/netif/etharp.h ../LwIP/src/include/lwip/etharp.h \
- ../LwIP/src/include/lwip/ip4.h ../LwIP/src/include/lwip/prot/ip4.h \
- ../LwIP/src/include/lwip/prot/ethernet.h \
- ../LwIP/src/include/lwip/prot/ieee.h \
- ../LwIP/src/include/lwip/prot/etharp.h \
- ../LwIP/src/include/netif/ethernet.h \
+ ../LwIP/port/include/ethernetif.c \
+ d:\clearcore-motion-stack\projecttemplate\libclearcore\inc\ethernetapi.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/def.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/arch.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/cc.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/opt.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/lwipopts.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/debug.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/mem.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/netif.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/err.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip_addr.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip4_addr.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip6_addr.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/def.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/pbuf.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/stats.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/memp.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/memp_std.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/memp_priv.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/mem_priv.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/netif/etharp.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/etharp.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip4.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ip4.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ethernet.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ieee.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/etharp.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/netif/ethernet.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME53_DFP\1.1.118\include/sam.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME53_DFP\1.1.118\include/same53n19a.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\4.5.0\CMSIS\Include/core_cm4.h \
@@ -122,61 +133,61 @@ LwIP/port/include/ethernetif.d LwIP/port/include/ethernetif.o: \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME53_DFP\1.1.118\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME53_DFP\1.1.118\include/pio/same53n19a.h
 
-../../libClearCore/inc/EthernetApi.h:
+d:\clearcore-motion-stack\projecttemplate\libclearcore\inc\ethernetapi.h:
 
-../LwIP/src/include/lwip/def.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/def.h:
 
-../LwIP/src/include/lwip/arch.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/arch.h:
 
-../LwIP/port/include/arch/cc.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/cc.h:
 
-../LwIP/src/include/lwip/opt.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/opt.h:
 
-../LwIP/port/include/lwipopts.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/lwipopts.h:
 
-../LwIP/src/include/lwip/debug.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/debug.h:
 
-../LwIP/src/include/lwip/mem.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/mem.h:
 
-../LwIP/src/include/lwip/netif.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/netif.h:
 
-../LwIP/src/include/lwip/err.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/err.h:
 
-../LwIP/src/include/lwip/ip_addr.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip_addr.h:
 
-../LwIP/src/include/lwip/ip4_addr.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip4_addr.h:
 
-../LwIP/src/include/lwip/ip6_addr.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip6_addr.h:
 
-../LwIP/src/include/lwip/def.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/def.h:
 
-../LwIP/src/include/lwip/pbuf.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/pbuf.h:
 
-../LwIP/src/include/lwip/stats.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/stats.h:
 
-../LwIP/src/include/lwip/memp.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/memp.h:
 
-../LwIP/src/include/lwip/priv/memp_std.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/memp_std.h:
 
-../LwIP/src/include/lwip/priv/memp_priv.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/memp_priv.h:
 
-../LwIP/src/include/lwip/priv/mem_priv.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/priv/mem_priv.h:
 
-../LwIP/src/include/netif/etharp.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/netif/etharp.h:
 
-../LwIP/src/include/lwip/etharp.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/etharp.h:
 
-../LwIP/src/include/lwip/ip4.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/ip4.h:
 
-../LwIP/src/include/lwip/prot/ip4.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ip4.h:
 
-../LwIP/src/include/lwip/prot/ethernet.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ethernet.h:
 
-../LwIP/src/include/lwip/prot/ieee.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/ieee.h:
 
-../LwIP/src/include/lwip/prot/etharp.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/prot/etharp.h:
 
-../LwIP/src/include/netif/ethernet.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/netif/ethernet.h:
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAME53_DFP\1.1.118\include/sam.h:
 

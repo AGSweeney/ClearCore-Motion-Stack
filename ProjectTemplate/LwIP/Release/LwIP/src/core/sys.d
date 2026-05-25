@@ -1,21 +1,25 @@
 LwIP/src/core/sys.d LwIP/src/core/sys.o: ../LwIP/src/core/sys.c \
- ../LwIP/src/include/lwip/opt.h ../LwIP/port/include/lwipopts.h \
- ../LwIP/src/include/lwip/debug.h ../LwIP/src/include/lwip/arch.h \
- ../LwIP/port/include/arch/cc.h ../LwIP/src/include/lwip/sys.h \
- ../LwIP/src/include/lwip/err.h ../LwIP/port/include/arch/sys_arch.h
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/opt.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/lwipopts.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/debug.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/arch.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/cc.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/sys.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/err.h \
+ D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/sys_arch.h
 
-../LwIP/src/include/lwip/opt.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/opt.h:
 
-../LwIP/port/include/lwipopts.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/lwipopts.h:
 
-../LwIP/src/include/lwip/debug.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/debug.h:
 
-../LwIP/src/include/lwip/arch.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/arch.h:
 
-../LwIP/port/include/arch/cc.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/cc.h:
 
-../LwIP/src/include/lwip/sys.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/sys.h:
 
-../LwIP/src/include/lwip/err.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\src\include/lwip/err.h:
 
-../LwIP/port/include/arch/sys_arch.h:
+D:\ClearCore-Motion-Stack\ProjectTemplate\LwIP\LwIP\port\include/arch/sys_arch.h:

@@ -8,6 +8,7 @@ The project focuses primarily on:
 - Coordinated multi-axis motion research
 - Motion planning and trajectory execution
 - EtherNet/IP motion experimentation
+- EtherCAT raw I/O personality experimentation
 - Industrial controller interoperability
 - PLC and robotics integration
 - Extensions to the [Enhanced ClearCore Library](https://github.com/AGSweeney/EnhancedClearCoreLibrary)
@@ -110,6 +111,16 @@ These interoperability concepts are intended to assist with:
 - Development and testing environments
 
 This project is not intended to replicate, replace, or emulate official Teknic products.
+
+---
+
+# EtherCAT Personality
+
+This repository includes an experimental ClearCore EtherCAT personality in `ProjectTemplate/EtherCATSlaveFirmware` and a companion Windows/Qt SOEM master utility in `EtherCATMaster`.
+
+The current EtherCAT work focuses on raw cyclic process data for ClearCore I/O rather than CiA-402 motion control. It supports onboard `IO0..IO5`, `DI6..DI8`, `A9..A12`, CCIO-8 expansion I/O, supply-voltage reporting, and firmware/master timing diagnostics through fixed PDO layouts.
+
+For architecture, runtime behavior, and complete PDO maps, see [`docs/EtherCAT_PERSONALITY.md`](docs/EtherCAT_PERSONALITY.md).
 
 ---
 

@@ -60,9 +60,9 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
       <Value>%24(PackRepoDir)\arm\CMSIS\4.5.0\CMSIS\Include</Value>
-      <Value>../LwIP/port/include</Value>
-      <Value>../LwIP/src/include</Value>
-      <Value>../../libClearCore/inc</Value>
+      <Value>%24(MSBuildProjectDirectory)\LwIP\port\include</Value>
+      <Value>%24(MSBuildProjectDirectory)\LwIP\src\include</Value>
+      <Value>%24(MSBuildProjectDirectory)\..\libClearCore\inc</Value>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -134,9 +134,9 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\SAME53_DFP\1.1.118\include</Value>
       <Value>%24(PackRepoDir)\arm\CMSIS\4.5.0\CMSIS\Include</Value>
-      <Value>../LwIP/port/include</Value>
-      <Value>../LwIP/src/include</Value>
-      <Value>../../libClearCore/inc</Value>
+      <Value>%24(MSBuildProjectDirectory)\LwIP\port\include</Value>
+      <Value>%24(MSBuildProjectDirectory)\LwIP\src\include</Value>
+      <Value>%24(MSBuildProjectDirectory)\..\libClearCore\inc</Value>
       <Value>%24(PackRepoDir)\arm\CMSIS\5.4.0\CMSIS\Core\Include\</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
@@ -199,6 +199,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LwIP\port\include\ethernetif.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LwIP\port\ethercat_unknown_eth_hook.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LwIP\port\sys_arch.c">

@@ -805,6 +805,10 @@
 #define LWIP_MULTICAST_TX_OPTIONS 1
 #endif
 
+#ifndef LWIP_HOOK_FILENAME
+#define LWIP_HOOK_FILENAME "lwip_hooks.h"
+#endif
+
 #define TCPIP_THREAD_TEST 1
 
 #endif // LWIPOPTS_H

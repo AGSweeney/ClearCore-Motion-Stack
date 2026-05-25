@@ -1,6 +1,6 @@
 # Local-only reference material; do not sync to remote.
-ExternalReferances/
 # ProjectTemplate/
+ExternalReferances/
 .cursor/
 AGENTS.md
 .vs/
@@ -8,3 +8,5 @@ AGENTS.md
 # Local build / packaging outputs (not source of truth).
 MotionBench/build-vs/
 MotionBench/motionbench-run.log
+EtherCATMaster/build/
+EtherCATMaster/out/

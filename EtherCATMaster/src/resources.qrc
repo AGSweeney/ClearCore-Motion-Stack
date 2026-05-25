@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="icons/app_icon.svg">resources/icons/app_icon.svg</file>
+    <file alias="images/clearcore.png">../ClearCore.png</file>
+    <file alias="images/clearcore_board.svg">../ClearCore_Board_Overview.svg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,161 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b3337"/>
+      <stop offset="100%" stop-color="#15191c"/>
+    </linearGradient>
+    <linearGradient id="connector" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171a1e"/>
+      <stop offset="100%" stop-color="#050607"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <style>
+      .label {
+        fill: #f2f5f8;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: .5px;
+      }
+      .small {
+        fill: #d6dde6;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .tiny {
+        fill: #9aa6b2;
+        font-family: Segoe UI, Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .pin { fill: #050607; stroke: #454c55; stroke-width: 2; }
+      .jack { fill: url(#connector); stroke: #3d4650; stroke-width: 3; }
+      .module { fill: #0b0d10; stroke: #48525d; stroke-width: 3; }
+      .overlay-off { fill: rgba(28, 34, 41, .92); stroke: #768391; stroke-width: 2; }
+      .overlay-on { fill: #16803f; stroke: #8bff4d; stroke-width: 3; }
+      .overlay-out { fill: #1e5f92; stroke: #57e5ff; stroke-width: 3; }
+      .overlay-text { fill: #ffffff; font: 800 15px Segoe UI, Arial, sans-serif; }
+      .overlay-detail { fill: #dce7ef; font: 700 12px Segoe UI, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" fill="#101215"/>
+  <rect x="78" y="72" width="1044" height="616" rx="44" fill="url(#board)" stroke="#59636f" stroke-width="5" filter="url(#shadow)"/>
+
+  <rect x="132" y="198" width="244" height="98" rx="12" fill="#0b0d10" stroke="#2e3841" stroke-width="3"/>
+  <text x="154" y="240" class="label" font-size="42">ClearCore</text>
+  <text x="254" y="274" text-anchor="middle" class="small">EtherCAT Slave</text>
+  <!-- Top connectors: A and DI bank -->
+  <g id="top-connectors">
+    <g transform="translate(151 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">A-12</text>
+    </g>
+    <g transform="translate(277 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">A-11</text>
+    </g>
+    <g transform="translate(403 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">A-10</text>
+    </g>
+    <g transform="translate(529 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">A-9</text>
+    </g>
+    <g transform="translate(655 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">DI-8</text>
+    </g>
+    <g transform="translate(781 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">DI-7</text>
+    </g>
+    <g transform="translate(907 92)">
+      <rect class="jack" x="0" y="0" width="94" height="66" rx="8"/>
+      <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+      <text x="47" y="92" text-anchor="middle" class="small">DI-6</text>
+    </g>
+  </g>
+
+  <!-- Communications: Ethernet, COM-0, and COM-1 are RJ45 style connectors. -->
+  <g transform="translate(397 236)">
+    <rect width="132" height="104" rx="9" class="module"/>
+    <rect x="22" y="24" width="88" height="50" rx="5" fill="#050607" stroke="#2f3841" stroke-width="3"/>
+    <rect x="38" y="36" width="56" height="26" rx="2" fill="#0b0d10"/>
+    <text x="66" y="132" text-anchor="middle" class="small">ETHERNET</text>
+  </g>
+
+  <g transform="translate(549 236)">
+    <rect width="84" height="84" rx="9" fill="#d8dde3" stroke="#828b96" stroke-width="4"/>
+    <rect x="20" y="24" width="44" height="40" rx="5" fill="#0b0d10" stroke="#303943" stroke-width="4"/>
+    <path d="M27 24 L36 13 H48 L57 24 Z" fill="#c5ccd4" stroke="#828b96" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(653 236)">
+    <rect width="132" height="104" rx="9" class="module"/>
+    <rect x="22" y="24" width="88" height="50" rx="5" fill="#050607" stroke="#2f3841" stroke-width="3"/>
+    <rect x="38" y="36" width="56" height="26" rx="2" fill="#0b0d10"/>
+    <text x="66" y="132" text-anchor="middle" class="small">5V COM-0</text>
+  </g>
+
+  <g transform="translate(805 236)">
+    <rect width="132" height="104" rx="9" class="module"/>
+    <rect x="22" y="24" width="88" height="50" rx="5" fill="#050607" stroke="#2f3841" stroke-width="3"/>
+    <rect x="38" y="36" width="56" height="26" rx="2" fill="#0b0d10"/>
+    <text x="66" y="132" text-anchor="middle" class="small">5V COM-1</text>
+  </g>
+
+  <g>
+    <g transform="translate(263 416)">
+      <rect width="146" height="86" rx="9" class="module"/>
+      <circle class="pin" cx="38" cy="30" r="8"/><circle class="pin" cx="61" cy="30" r="8"/><circle class="pin" cx="84" cy="30" r="8"/><circle class="pin" cx="107" cy="30" r="8"/>
+      <circle class="pin" cx="38" cy="56" r="8"/><circle class="pin" cx="61" cy="56" r="8"/><circle class="pin" cx="84" cy="56" r="8"/><circle class="pin" cx="107" cy="56" r="8"/>
+      <text x="73" y="-17" text-anchor="middle" class="small">M-0</text>
+    </g>
+    <g transform="translate(437 416)">
+      <rect width="146" height="86" rx="9" class="module"/>
+      <circle class="pin" cx="38" cy="30" r="8"/><circle class="pin" cx="61" cy="30" r="8"/><circle class="pin" cx="84" cy="30" r="8"/><circle class="pin" cx="107" cy="30" r="8"/>
+      <circle class="pin" cx="38" cy="56" r="8"/><circle class="pin" cx="61" cy="56" r="8"/><circle class="pin" cx="84" cy="56" r="8"/><circle class="pin" cx="107" cy="56" r="8"/>
+      <text x="73" y="-17" text-anchor="middle" class="small">M-1</text>
+    </g>
+    <g transform="translate(617 416)">
+      <rect width="146" height="86" rx="9" class="module"/>
+      <circle class="pin" cx="38" cy="30" r="8"/><circle class="pin" cx="61" cy="30" r="8"/><circle class="pin" cx="84" cy="30" r="8"/><circle class="pin" cx="107" cy="30" r="8"/>
+      <circle class="pin" cx="38" cy="56" r="8"/><circle class="pin" cx="61" cy="56" r="8"/><circle class="pin" cx="84" cy="56" r="8"/><circle class="pin" cx="107" cy="56" r="8"/>
+      <text x="73" y="-17" text-anchor="middle" class="small">M-2</text>
+    </g>
+    <g transform="translate(791 416)">
+      <rect width="146" height="86" rx="9" class="module"/>
+      <circle class="pin" cx="38" cy="30" r="8"/><circle class="pin" cx="61" cy="30" r="8"/><circle class="pin" cx="84" cy="30" r="8"/><circle class="pin" cx="107" cy="30" r="8"/>
+      <circle class="pin" cx="38" cy="56" r="8"/><circle class="pin" cx="61" cy="56" r="8"/><circle class="pin" cx="84" cy="56" r="8"/><circle class="pin" cx="107" cy="56" r="8"/>
+      <text x="73" y="-17" text-anchor="middle" class="small">M-3</text>
+    </g>
+  </g>
+
+  <!-- Bottom I/O connectors -->
+  <g id="io-connectors">
+    <g transform="translate(151 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-0</text></g>
+    <g transform="translate(277 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-1</text></g>
+    <g transform="translate(403 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-2</text></g>
+    <g transform="translate(529 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-3</text></g>
+    <g transform="translate(655 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-4</text></g>
+    <g transform="translate(781 570)"><rect class="jack" width="94" height="66" rx="8"/><circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/><text x="47" y="-14" text-anchor="middle" class="small">I/O-5</text></g>
+  </g>
+
+  <g transform="translate(907 570)">
+    <text x="47" y="-14" text-anchor="middle" class="small">POWER</text>
+    <rect class="jack" width="94" height="66" rx="8"/>
+    <circle class="pin" cx="22" cy="31" r="10"/><circle class="pin" cx="47" cy="31" r="10"/><circle class="pin" cx="72" cy="31" r="10"/>
+  </g>
+
+</svg>

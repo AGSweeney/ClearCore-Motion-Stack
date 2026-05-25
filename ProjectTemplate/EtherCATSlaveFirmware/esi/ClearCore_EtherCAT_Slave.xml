@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EtherCATInfo Version="1.6">
+  
+  
+  <Vendor>
+    
+    
+    <Id>#xFFFFFFFE</Id>
+    
+    
+    <Name>ClearCore Motion Stack</Name>
+    
+  
+  </Vendor>
+  
+  
+  <Descriptions>
+    
+    
+    <Groups>
+      
+      
+      <Group>
+        
+        
+        <Type>ClearCoreMotionStack</Type>
+        
+        
+        <Name LcId="1033">ClearCore Motion Stack</Name>
+        
+      
+      </Group>
+      
+    
+    </Groups>
+    
+    
+    <Devices>
+      
+      
+      <Device Physics="YY">
+        
+        
+        <Type ProductCode="#x00000001" RevisionNo="#x00000001">ClearCore EtherCAT Slave</Type>
+        
+        
+        <Name LcId="1033">ClearCore EtherCAT Slave</Name>
+        
+        
+        <GroupType>ClearCoreMotionStack</GroupType>
+        
+        
+        <Info>
+          
+          
+          <Name LcId="1033">ClearCore raw EtherCAT I/O personality with onboard I/O, CCIO, supply voltage, and timing diagnostics.</Name>
+          
+        
+        </Info>
+        
+        
+        <Fmmu>Outputs</Fmmu>
+        
+        
+        <Fmmu>Inputs</Fmmu>
+        
+        
+        <Sm MinSize="0" MaxSize="0" DefaultSize="0" StartAddress="#x0000" ControlByte="#x00" Enable="0">MBoxOut</Sm>
+        <Sm MinSize="0" MaxSize="0" DefaultSize="0" StartAddress="#x0000" ControlByte="#x00" Enable="0">MBoxIn</Sm>
+        <Sm MinSize="0" MaxSize="40" DefaultSize="40" StartAddress="#x1000" ControlByte="#x64" Enable="1">Outputs</Sm>
+        <Sm MinSize="0" MaxSize="64" DefaultSize="64" StartAddress="#x1100" ControlByte="#x20" Enable="1">Inputs</Sm>
+        <RxPdo Fixed="1" Mandatory="1" Sm="2">
+          
+          
+          <Index>#x1600</Index>
+          
+          
+          <Name>RxPDO Command Image</Name>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>1</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>Control word</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>2</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>Mode of operation</Name>
+            
+            
+            <DataType>SINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>3</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>A9-A12 analog mode request</Name>
+            
+            
+            <DataType>USINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>4</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Target position counts</Name>
+            
+            
+            <DataType>DINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>5</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Target velocity counts per second</Name>
+            
+            
+            <DataType>DINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>6</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>Target torque tenths percent</Name>
+            
+            
+            <DataType>INT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>7</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>IO0-IO5 direction request</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>8</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Sequence</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>9</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>CCIO control</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>10</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>CCIO reserved</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>11</SubIndex>
+            
+            
+            <BitLen>64</BitLen>
+            
+            
+            <Name>CCIO output bits</Name>
+            
+            
+            <DataType>ULINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x7000</Index>
+            
+            
+            <SubIndex>12</SubIndex>
+            
+            
+            <BitLen>64</BitLen>
+            
+            
+            <Name>CCIO direction bits</Name>
+            
+            
+            <DataType>ULINT</DataType>
+            
+          
+          </Entry>
+          
+        
+        </RxPdo>
+        
+        
+        <TxPdo Fixed="1" Mandatory="1" Sm="3">
+          
+          
+          <Index>#x1A00</Index>
+          
+          
+          <Name>TxPDO Status Image</Name>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>1</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>Status word</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>2</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>Mode of operation display</Name>
+            
+            
+            <DataType>SINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>3</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>Fault code</Name>
+            
+            
+            <DataType>USINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>4</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Actual position counts</Name>
+            
+            
+            <DataType>DINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>5</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Actual velocity counts per second</Name>
+            
+            
+            <DataType>DINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>6</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>Supply voltage centivolts</Name>
+            
+            
+            <DataType>INT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>7</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>Onboard extended status</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>8</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Sequence acknowledge</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>9</SubIndex>
+            
+            
+            <BitLen>16</BitLen>
+            
+            
+            <Name>CCIO status</Name>
+            
+            
+            <DataType>UINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>10</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>CCIO board count</Name>
+            
+            
+            <DataType>USINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>11</SubIndex>
+            
+            
+            <BitLen>8</BitLen>
+            
+            
+            <Name>CCIO reserved</Name>
+            
+            
+            <DataType>USINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>12</SubIndex>
+            
+            
+            <BitLen>64</BitLen>
+            
+            
+            <Name>CCIO input bits</Name>
+            
+            
+            <DataType>ULINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>13</SubIndex>
+            
+            
+            <BitLen>64</BitLen>
+            
+            
+            <Name>CCIO status bits</Name>
+            
+            
+            <DataType>ULINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>14</SubIndex>
+            
+            
+            <BitLen>64</BitLen>
+            
+            
+            <Name>CCIO direction bits</Name>
+            
+            
+            <DataType>ULINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>15</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Firmware loop period us</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>16</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Firmware loop runtime us</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>17</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Firmware loop jitter us</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+          
+          <Entry>
+            
+            
+            <Index>#x6000</Index>
+            
+            
+            <SubIndex>18</SubIndex>
+            
+            
+            <BitLen>32</BitLen>
+            
+            
+            <Name>Firmware transport us</Name>
+            
+            
+            <DataType>UDINT</DataType>
+            
+          
+          </Entry>
+          
+        
+        </TxPdo>
+        
+      
+      </Device>
+      
+    
+    </Devices>
+    
+  
+  </Descriptions>
+  
+
+</EtherCATInfo>

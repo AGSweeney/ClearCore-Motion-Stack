@@ -374,23 +374,10 @@ static packetBuf *low_level_input(netInt *netif) {
     @param netif the lwip network interface structure for this ethernetif
 **/
 static void ethernetif_input(netInt *netif, packetBuf *p) {
-    u16_t packetType;
-    // Determine packet type from payload's Ethernet header.
-    packetType = htons(((struct eth_hdr *)p->payload)->type);
-    switch (packetType) {
-        case ETHTYPE_ARP:   // Address resolution protocol
-        // fall through
-        case ETHTYPE_IP:    //  Internet protocol v4
-            if (netif->input(p, netif) == ERR_OK) {
-                break;
-            }
-            // Otherwise fall through to default of freeing pbuf.
-            LWIP_DEBUGF(NETIF_DEBUG, ("IP input error.."));
-            // fall through
-        default:
-            pbuf_free(p);
-            p = NULL;
-            break;
+    if (netif->input(p, netif) != ERR_OK) {
+        LWIP_DEBUGF(NETIF_DEBUG, ("Ethernet input error.\n"));
+        pbuf_free(p);
+        p = NULL;
     }
 }
 #pragma GCC diagnostic push

@@ -4,6 +4,8 @@
 
 LwIP\port\include\ethernetif.c
 
+LwIP\port\ethercat_unknown_eth_hook.c
+
 LwIP\port\sys_arch.c
 
 LwIP\src\api\api_lib.c
