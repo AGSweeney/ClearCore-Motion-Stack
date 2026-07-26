@@ -1,5 +1,5 @@
-#ifndef PROJECT_LWIP_HOOKS_H_
-#define PROJECT_LWIP_HOOKS_H_
+#ifndef LEAP_DEVICE_FIRMWARE_LWIP_HOOKS_H_
+#define LEAP_DEVICE_FIRMWARE_LWIP_HOOKS_H_
 
 #include "lwip/err.h"
 #include "lwip/netif.h"
@@ -9,14 +9,13 @@
 extern "C" {
 #endif
 
-err_t EthercatSlave_LwipUnknownEthProtocolHook(struct pbuf *packet,
-                                               struct netif *netif);
+err_t LeapDevice_LwipUnknownEthProtocolHook(struct pbuf *packet, struct netif *netif);
 
 #ifdef __cplusplus
 }
 #endif
 
 #define LWIP_HOOK_UNKNOWN_ETH_PROTOCOL(p, netif) \
-    EthercatSlave_LwipUnknownEthProtocolHook((p), (netif))
+    LeapDevice_LwipUnknownEthProtocolHook((p), (netif))
 
-#endif  // PROJECT_LWIP_HOOKS_H_
+#endif /* LEAP_DEVICE_FIRMWARE_LWIP_HOOKS_H_ */

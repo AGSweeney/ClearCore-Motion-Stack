@@ -124,6 +124,14 @@ For architecture, runtime behavior, and complete PDO maps, see [`docs/EtherCAT_P
 
 ---
 
+# LEAP Protocol Suite
+
+The repository now includes a draft project-owned link-layer protocol suite in [`docs/ClearCore_Link_Layer_Protocol`](docs/ClearCore_Link_Layer_Protocol). This design extracts the useful raw Ethernet cyclic I/O concepts from the experimental EtherCAT personality and extends them into LEAP, the Layer2 Ethernet Automation Protocol, with explicit discovery, ownership, state, process-data, diagnostics, and future extension rules.
+
+LEAP is a design package for review and is not yet implemented in firmware.
+
+---
+
 # Relationship to Teknic Products
 
 Teknic's newer EtherNet/IP platform, ClearPath-IP, offers several advantages including:
